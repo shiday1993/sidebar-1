@@ -1,0 +1,24 @@
+// === 1️⃣ Import core Bootstrap SCSS ===
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// === 2️⃣ Override variables BEFORE components ===
+$theme-colors: (
+  "primary":    $primary,
+  "kl":      #0D47A1,
+  "sidebar": #1A237E,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "black":      $black,
+);
+
+// === 3️⃣ Import Bootstrap components you need ===
+@import "bootstrap/scss/offcanvas";
+
+// === 4️⃣ Import MDB (harus di paling bawah karena dia CSS) ===
+@import url('mdb-ui-kit/css/mdb.min.css');
