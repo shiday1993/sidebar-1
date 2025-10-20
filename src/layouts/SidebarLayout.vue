@@ -1,7 +1,7 @@
 <template>
   <aside :class="['sidebar', { expanded: isExpanded }]">
     <!-- Header Sidebar -->
-    <div class="sidebar-header">
+    <div class=" navbar bg-primary sidebar-header">
       <i class="fas fa-hospital-alt"></i>
       <span class="sidebar-title">My Klinik</span>
     </div>
@@ -45,7 +45,7 @@ onMounted(() => {
 
 function toggleSidebar() {
   isExpanded.value = !isExpanded.value
-  emit('toggled', isExpanded.value)   // ⬅️ kirim status ke parent
+  emit('toggled', isExpanded.value) 
 }
 
 defineExpose({
@@ -85,7 +85,6 @@ defineExpose({
 }
 
 .sidebar-header {
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,6 +141,10 @@ defineExpose({
 
 .sidebar-label {
   display: none;
+}
+
+.navbar{
+ height: 40pt;
 }
 
 .sidebar.expanded .sidebar-label {
